@@ -26,7 +26,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-UIAC.aml</string>
 			</dict>
@@ -34,7 +34,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-USBX.aml</string>
 			</dict>
@@ -55,7 +55,7 @@
 				<string>SSDT-PMC.aml</string>
 			</dict>
 		</array>
-		<key>Block</key>
+		<key>Delete</key>
 		<array>
 			<dict>
 				<key>All</key>
@@ -251,9 +251,16 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>AwCYPg==</data>
+				<key>igfxfw</key>
+				<data>AgAAAA==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>shikigva</key>
+				<integer>80</integer>
 			</dict>
 		</dict>
-		<key>Block</key>
+		<key>Delete</key>
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1b,0x0)</key>
 			<array>
@@ -306,6 +313,22 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/WhateverGreen</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>AirportBrcmFixup.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/AirportBrcmFixup</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -418,21 +441,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/RealtekRTL8111</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			<dict>
-				<key>BundlePath</key>
-				<string>AirportBrcmFixup.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AirportBrcmFixup</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -626,16 +634,14 @@
 			<string>Auto</string>
 			<key>HideAuxiliary</key>
 			<false/>
-			<key>HideSelf</key>
-			<false/>
 			<key>PickerAttributes</key>
 			<integer>0</integer>
 			<key>PickerAudioAssist</key>
 			<false/>
 			<key>PickerMode</key>
-			<string>Apple</string>
+			<string>External</string>
 			<key>PollAppleHotKeys</key>
-			<true/>
+			<false/>
 			<key>ShowPicker</key>
 			<true/>
 			<key>TakeoffDelay</key>
@@ -647,32 +653,23 @@
 		<dict>
 			<key>AppleDebug</key>
 			<false/>
+			<key>ApplePanic</key>
+			<false/>
 			<key>DisableWatchDog</key>
 			<false/>
 			<key>DisplayDelay</key>
 			<integer>0</integer>
 			<key>DisplayLevel</key>
 			<integer>2147483650</integer>
+			<key>SerialInit</key>
+			<false/>
+			<key>SysReport</key>
+			<false/>
 			<key>Target</key>
 			<integer>19</integer>
 		</dict>
 		<key>Entries</key>
-		<array>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Auxiliary</key>
-				<false/>
-				<key>Comment</key>
-				<string>Not signed for security reasons</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Name</key>
-				<string>CustomOS</string>
-				<key>Path</key>
-				<string>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x0)/NVMe(0x1,11-22-33-44-55-66-77-88)/HD(1,GPT,00000000-0000-0000-0000-000000000000,0x800,0x64000)/\EFI\BOOT\BOOTX64.EFI</string>
-			</dict>
-		</array>
+		<array/>
 		<key>Security</key>
 		<dict>
 			<key>AllowNvramReset</key>
@@ -736,18 +733,16 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>darkwake=0</string>
+				<string>brcmfx-country=US debug=0x01 -v</string>
 				<key>bootercfg</key>
-				<string> -v debug=1 agdpmod=pikera</string>
+				<string></string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
-				<key>nvda_drv</key>
-				<data>MQ==</data>
 				<key>prev-lang:kbd</key>
 				<data>emgtSGFuczoyNTI=</data>
 			</dict>
 		</dict>
-		<key>Block</key>
+		<key>Delete</key>
 		<dict>
 			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
 			<array>
@@ -796,22 +791,66 @@
 	<dict>
 		<key>Automatic</key>
 		<true/>
+		<key>DataHub</key>
+		<dict>
+			<key>ARTFrequency</key>
+			<integer>0</integer>
+			<key>BoardProduct</key>
+			<string>Mac-AA95B1DDAB278B95</string>
+			<key>BoardRevision</key>
+			<data>Bw==</data>
+			<key>DevicePathsSupported</key>
+			<integer>0</integer>
+			<key>FSBFrequency</key>
+			<integer>0</integer>
+			<key>InitialTSC</key>
+			<integer>0</integer>
+			<key>PlatformName</key>
+			<string></string>
+			<key>SmcBranch</key>
+			<data>ajEzOF85AAA=</data>
+			<key>SmcPlatform</key>
+			<data>ajEzOAAAAAA=</data>
+			<key>SmcRevision</key>
+			<data>AkYPAAAS</data>
+			<key>StartupPowerEvents</key>
+			<integer>0</integer>
+			<key>SystemProductName</key>
+			<string>iMac19,1</string>
+			<key>SystemSerialNumber</key>
+			<string>C02ZJ4ZBJV3Q</string>
+			<key>SystemUUID</key>
+			<string>65C140E2-B25F-4EE1-8D85-AC64D3151863</string>
+		</dict>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>M0000000000000001</string>
+			<string>C02941404J9LNV9AD</string>
 			<key>ROM</key>
-			<data>ESIzRFVm</data>
+			<data>ESIzAAAA</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
-			<string>W00000000001</string>
+			<string>C02ZJ4ZBJV3Q</string>
 			<key>SystemUUID</key>
-			<string>00000000-0000-0000-0000-000000000000</string>
+			<string>65C140E2-B25F-4EE1-8D85-AC64D3151863</string>
+		</dict>
+		<key>PlatformNVRAM</key>
+		<dict>
+			<key>BID</key>
+			<string>Mac-AA95B1DDAB278B95</string>
+			<key>FirmwareFeatures</key>
+			<data>dvWP/QAAAAA=</data>
+			<key>FirmwareFeaturesMask</key>
+			<data>f//f/wAAAAA=</data>
+			<key>MLB</key>
+			<string>C02941404J9LNV9AD</string>
+			<key>ROM</key>
+			<data>ESIzAAAA</data>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -827,6 +866,8 @@
 		<key>APFS</key>
 		<dict>
 			<key>EnableJumpstart</key>
+			<false/>
+			<key>GlobalConnect</key>
 			<false/>
 			<key>HideVerbose</key>
 			<false/>
@@ -889,8 +930,6 @@
 			<false/>
 			<key>ConsoleMode</key>
 			<string></string>
-			<key>DirectGopCacheMode</key>
-			<string></string>
 			<key>DirectGopRendering</key>
 			<false/>
 			<key>IgnoreTextInGraphics</key>
@@ -907,6 +946,8 @@
 			<true/>
 			<key>TextRenderer</key>
 			<string>BuiltinGraphics</string>
+			<key>UgaPassThrough</key>
+			<false/>
 		</dict>
 		<key>ProtocolOverrides</key>
 		<dict>
@@ -917,6 +958,8 @@
 			<key>AppleDebugLog</key>
 			<false/>
 			<key>AppleEvent</key>
+			<false/>
+			<key>AppleFramebufferInfo</key>
 			<false/>
 			<key>AppleImageConversion</key>
 			<false/>
@@ -943,16 +986,18 @@
 		</dict>
 		<key>Quirks</key>
 		<dict>
+			<key>DeduplicateBootOrder</key>
+			<false/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
 			<key>IgnoreInvalidFlexRatio</key>
 			<true/>
 			<key>ReleaseUsbOwnership</key>
 			<false/>
-			<key>RequestBootVarFallback</key>
-			<false/>
 			<key>RequestBootVarRouting</key>
 			<true/>
+			<key>TscSyncTimeout</key>
+			<integer>0</integer>
 			<key>UnblockFsConnect</key>
 			<false/>
 		</dict>
